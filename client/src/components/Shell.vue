@@ -10,49 +10,38 @@
         About me
       </div>
       <div class='shell__body'>
-        <div class='shell__body__block'>
-          <div class='shell__body__block__question'>
-            prudywsh.location
-          </div>
-          <div class='shell__body__block__answer'>
-            "Paris, France"
-          </div>
-        </div>
-        <div class='shell__body__block'>
-          <div class='shell__body__block__question'>
-            prudywsh.interests
-          </div>
-          <div class='shell__body__block__answer'>
-            ["competitive programming", "web", "road cycling", "swimming", "beer"]
-          </div>
-        </div>
-        <div class='shell__body__block'>
-          <div class='shell__body__block__question'>
-            prudywsh.twitter
-          </div>
-          <div class='shell__body__block__answer'>
-            "<a href="" class='shell__body__link'>https://twitter.com/prudywsh</a>"
-          </div>
-        </div>
+        <ShellItem type='string' title='prudywsh.location' data='Paris, France' />
+        <ShellItem type='array' title='prudywsh.interests' :data='interests' />
+        <ShellItem type='link' title='prudywsh.twitter' data='https://twitter.com/prudywsh' />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ShellItem from '@/components/ShellItem.vue';
+
 export default {
   name: 'Shell',
-}
+  components: {
+    ShellItem,
+  },
+  data: () => (
+    {
+      interests: ['competitive programming', 'web', 'road cycling', 'swimming', 'beer'],
+    }
+  ),
+};
 </script>
 
 <style>
-  .shell-container {
-    background-color: #81D4FA;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+.shell-container {
+  background-color: #81D4FA;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
-  .shell {
+.shell {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -101,22 +90,5 @@ export default {
   padding: 3em 2em;
   background-color: #333;
   color: #fafafa;
-}
-
-.shell__body__block__question::before {
-  content: '>'
-}
-
-.shell__body__block__answer {
-  margin-top: .5em;
-  color: #bbb;
-}
-
-.shell__body__block:not(:last-child) {
-  margin-bottom: 1.5em;
-}
-
-.shell__body__link {
-  color: rgb(27, 173, 248);
 }
 </style>
