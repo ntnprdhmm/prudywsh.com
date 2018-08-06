@@ -1,9 +1,9 @@
 <template>
   <header class="header">
     <div class="header__container">
-      <div class="header__container__title">
-        Hello world !
-      </div>
+      <h1 class="header__container__title">
+        Prudywsh.com
+      </h1>
     </div>
     <Nav :show='showNav' />
     <button @click='toggleNav' :class='{ "button--active" : showNav,
@@ -54,6 +54,7 @@ export default {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .2em;
+    margin: 0;
   }
 
   /* BUTTON PART */

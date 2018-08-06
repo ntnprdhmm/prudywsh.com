@@ -11,4 +11,8 @@
   font-family: 'Open Sans', monospace;
   color: #2c3e50;
 }
+
+strong {
+  color: #333;
+}
 </style>
