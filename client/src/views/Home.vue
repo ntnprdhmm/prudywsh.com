@@ -2,6 +2,7 @@
   <div class="home">
     <Navbar />
     <Hello />
+    <Bar />
     <Shell />
   </div>
 </template>
@@ -10,6 +11,7 @@
 import Navbar from '@/components/Navbar.vue';
 import Hello from '@/components/Hello.vue';
 import Shell from '@/components/Shell.vue';
+import Bar from '@/components/Bar.vue';
 
 export default {
   name: 'home',
@@ -17,6 +19,7 @@ export default {
     Hello,
     Navbar,
     Shell,
+    Bar,
   },
 };
 </script>
