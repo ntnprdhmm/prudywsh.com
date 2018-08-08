@@ -5,7 +5,8 @@
       <div class='pump__base'></div>
       <div class='pump__arm'></div>
       <div class='pump__head'>
-        <div class='pump__head__tap' id='tap'>
+        <div class='pump__head__tap' :class='{ "pump__head__tap--open": showAnimation}'
+          @click='handleTap'>
           <div class='pump__head__tap__top'></div>
           <div class='pump__head__tap__bottom'></div>
         </div>
@@ -13,7 +14,7 @@
         <div class='pump__head__output'></div>
       </div>
       <div class='pump-liquid-container'>
-        <div id='pump-liquid' class='pump-liquid'></div>
+        <div class='pump-liquid' :class='{ "pump-liquid--on": showAnimation  }'></div>
       </div>
     </div>
   </div>
@@ -22,11 +23,32 @@
 <script>
 export default {
   name: 'Pump',
+  data: () => ({
+    clicked: false,
+    stopAnimation: false,
+  }),
+  methods: {
+    handleTap() {
+      if (this.clicked === false) {
+        this.clicked = true;
+        this.$emit('tapClicked');
+        setTimeout(this.handleAnimationEnd, 2000);
+      }
+    },
+    handleAnimationEnd() {
+      this.stopAnimation = true;
+    },
+  },
+  computed: {
+    showAnimation() {
+      return this.clicked && !this.stopAnimation;
+    },
+  },
 };
 </script>
 
 <style scoped lang='scss'>
-$pump-height: 400px;
+$pump-height: 300px;
 
 $pump-tap-color: #8b4513;
 $pump-mecanic-color: #bbb;

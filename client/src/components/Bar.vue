@@ -2,10 +2,10 @@
   <div class='main-container'>
     <div>
       <div class='container'>
-        <Pump />
+        <Pump @tapClicked='handleTapClick' />
       </div>
       <div class='container'>
-        <Beer />
+        <Beer :fill='tapClicked' />
       </div>
     </div>
   </div>
@@ -17,9 +17,17 @@ import Beer from '@/components/Beer.vue';
 
 export default {
   name: 'Bar',
+  data: () => ({
+    tapClicked: false,
+  }),
   components: {
     Pump,
     Beer,
+  },
+  methods: {
+    handleTapClick() {
+      this.tapClicked = true;
+    },
   },
 };
 </script>

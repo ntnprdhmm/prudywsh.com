@@ -1,6 +1,6 @@
 <template>
   <div class='beer-container'>
-    <div class='foam' id='foam'>
+    <div class='foam' :class='{ "foam--filling": fill }'>
       <div class='foam__item'>
         <div class='foam__item__circle'></div>
       </div>
@@ -25,13 +25,16 @@
     </div>
     <div class='glass' id='glass'></div>
     <div class='grip'></div>
-    <div id='beer-liquid'></div>
+    <div :class='{ "beer-liquid beer-liquid--filling": fill }'></div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Beer',
+  props: {
+    fill: Boolean,
+  },
 };
 </script>
 
@@ -46,7 +49,7 @@ $glass-width: 70px;
 $grip-width: 20px;
 $grip-height: 45px;
 
-$foam-item-width: (($glass-width - (3 * $glass-border)) / 8);
+$foam-item-width: (($glass-width - (3 * $glass-border)) / 5.5);
 $foam-circle-diameter: $foam-item-width + ($foam-item-width * 0.90);
 $foam-item-height: $foam-circle-diameter + ($foam-circle-diameter / 2);
 
@@ -115,6 +118,7 @@ $filling-duration: 2s;
 }
 .foam--filling {
   animation: fill-foam $filling-duration ease-in-out;
+  display: block;
 }
 
 .beer-liquid {
