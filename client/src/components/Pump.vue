@@ -6,7 +6,7 @@
       <div class='pump__arm'></div>
       <div class='pump__head'>
         <div class='pump__head__tap' :class='{ "pump__head__tap--open": showAnimation}'
-          @click='handleTap'>
+          @click='handleTapClick'>
           <div class='pump__head__tap__top'></div>
           <div class='pump__head__tap__bottom'></div>
         </div>
@@ -28,7 +28,7 @@ export default {
     stopAnimation: false,
   }),
   methods: {
-    handleTap() {
+    handleTapClick() {
       if (this.clicked === false) {
         this.clicked = true;
         this.$emit('tapClicked');
@@ -36,6 +36,7 @@ export default {
       }
     },
     handleAnimationEnd() {
+      this.$emit('animationEnded');
       this.stopAnimation = true;
     },
   },

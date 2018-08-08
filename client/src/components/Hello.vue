@@ -1,7 +1,16 @@
 <template>
-  <div class="hello">
-    Hello ! My name is&nbsp;<strong>Antoine Prudhomme</strong>&nbsp;and I'm a&nbsp;
-    <strong>fullstack engineer</strong>.
+  <div class='hello'>
+    <div class='hello__content'>
+      <h2>
+        Hello, world !
+      </h2>
+      <p class='hello__content__text'>
+        I'm <strong>Antoine Prudhomme</strong>
+        &nbsp;<span class='hello__content__text--small'>(aka <strong>prudywsh</strong>)</span>
+        <br>
+        a 23yo <strong>fullstack engineer</strong> living in <strong>Paris</strong>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -17,6 +26,19 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10em;
+    padding-top: 6em;
+  }
+
+  .hello__content {
+    text-align: center;
+  }
+
+  .hello__content__text {
+    font-size: 1.5em;
+  }
+
+  .hello__content__text--small {
+    font-size: .6em;
+    color: #555;
   }
 </style>
