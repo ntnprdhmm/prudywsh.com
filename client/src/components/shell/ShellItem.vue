@@ -1,7 +1,7 @@
 <template>
   <div class='shell__body__item'>
     <div class='shell__body__item__title'>
-      {{ title }}
+      prudywsh.{{ title }}
     </div>
     <div class='shell__body__item__value'>
       <ShellItemString :value='data' v-if='isString' />
@@ -46,13 +46,15 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+@import '@/config/variables.scss';
+
 .shell__body__item__title::before {
   content: '>'
 }
 
 .shell__body__item__value {
   margin-top: .5em;
-  color: #bbb;
+  color: $grey-6;
 }
 
 .shell__body__item:not(:last-child) {

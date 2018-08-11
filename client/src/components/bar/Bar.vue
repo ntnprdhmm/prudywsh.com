@@ -16,7 +16,7 @@
       <div class='bar__content__flex'>
         <div>
           <h2 class='bar__content__flex__title'>
-            Coding is fun.
+            Coding is fun
           </h2>
           <p>
             Like this little beer pump !
@@ -68,7 +68,7 @@ export default {
     display: table;
     width: 100%;
     table-layout: fixed;
-    padding: 2em 0 2em 0;
+    padding: $section-padding;
   }
 
   .bar__drawing, .bar__content {

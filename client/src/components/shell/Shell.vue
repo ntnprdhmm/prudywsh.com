@@ -10,9 +10,11 @@
         About me
       </div>
       <div class='shell__body'>
-        <ShellItem type='string' title='prudywsh.location' data='Paris, France' />
-        <ShellItem type='array' title='prudywsh.interests' :data='interests' />
-        <ShellItem type='link' title='prudywsh.twitter' data='https://twitter.com/prudywsh' />
+        <ShellItem v-for='(value, key) in shellItems'
+          :title='key'
+          :type='value.type'
+          :data='value.data'
+          :key="key" />
       </div>
     </div>
   </div>
@@ -26,31 +28,41 @@ export default {
   components: {
     ShellItem,
   },
-  data: () => (
-    {
-      interests: ['competitive programming', 'web', 'road cycling', 'swimming', 'beer'],
-    }
-  ),
+  data: () => ({
+    shellItems: {
+      location: { type: 'string', data: 'Paris, France' },
+      work_at: { type: 'string', data: 'Spendesk' },
+      interests: {
+        type: 'array',
+        data: ['web', 'fullstack', 'competitive programming', 'road cycling', 'beer'],
+      },
+      favorite_languages: {
+        type: 'array',
+        data: ['Javascript', 'Python'],
+      },
+    },
+  }),
 };
 </script>
 
 <style scoped lang='scss'>
+@import '@/config/variables.scss';
+
 .shell-container {
-  background-color: #e73357;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  background-color: $secondary;
+  padding: $section-padding;
 }
 
 .shell {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #333;
+  border: 1px solid $grey-10;
   border-radius: 5px;
 }
 
 .shell__header {
-  background-color: #ccc;
+  background-color: $grey-4;
   text-align: center;
   padding: .5em;
   border-top-left-radius: 5px;
@@ -69,26 +81,25 @@ export default {
 .circle {
   width: .8em;
   height: .8em;
-  background-color: #fff;
-  display: inline-block;
+  background-color: $white;
   float: left;
   margin: .6em 0 .6em .6em;
   border-radius: 50%;
-  box-shadow: .1px .1px #333;
+  box-shadow: .1px .1px $grey-10;
 }
 .circle--red {
-  background-color: rgb(255, 59, 48);
+  background-color: $mac-red;
 }
 .circle--yellow {
-  background-color: rgb(255, 204, 0);
+  background-color: $mac-yellow;
 }
 .circle--green {
-  background-color: rgb(76, 217, 100);
+  background-color: $mac-green;
 }
 
 .shell__body {
   padding: 3em 2em;
-  background-color: #333;
-  color: #fafafa;
+  background-color: $grey-10;
+  color: $grey-0;
 }
 </style>

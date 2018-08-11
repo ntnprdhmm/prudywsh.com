@@ -81,7 +81,7 @@ $pump-head-ouput-left-offset: ($pump-head-fixing-diameter - $pump-head-output-wi
 $pump-head-tap-bottom-width: $pump-head-fixing-diameter * 0.3;
 $pump-head-tap-bottom-height: $pump-head-fixing-diameter;
 $pump-head-tap-bottom-left-offset: ($pump-head-fixing-diameter - $pump-head-tap-bottom-width) / 2;
-$pump-head-tap-bottom-bottom-offset: $pump-head-fixing-diameter * -0.5;;
+$pump-head-tap-bottom-bottom-offset: $pump-head-fixing-diameter * -0.5;
 
 $pump-head-tap-top-width: $pump-head-fixing-diameter / 2;
 $pump-head-tap-top-height: $pump-head-fixing-diameter * 1.5;
