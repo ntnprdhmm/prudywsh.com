@@ -11,6 +11,8 @@
   font-family: $font-family;
   font-size: $font-size;
   color: $grey-10;
+
+  box-sizing: border-box;
 }
 
 </style>

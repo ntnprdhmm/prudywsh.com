@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-  @import '../config/variables.scss';
+  @import '@/config/variables.scss';
 
   .hello {
     background-color: $white;

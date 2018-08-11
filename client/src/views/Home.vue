@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class='home'>
     <Navbar />
     <Hello />
     <Bar />
@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
-import Hello from '@/components/Hello.vue';
-import Shell from '@/components/Shell.vue';
-import Bar from '@/components/Bar.vue';
+import Navbar from '@/components/navbar/Navbar.vue';
+import Hello from '@/components/hello/Hello.vue';
+import Shell from '@/components/shell/Shell.vue';
+import Bar from '@/components/bar/Bar.vue';
 
 export default {
   name: 'home',

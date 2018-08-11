@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import ShellItem from '@/components/ShellItem.vue';
+import ShellItem from './ShellItem.vue';
 
 export default {
   name: 'Shell',

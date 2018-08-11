@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import ShellItemString from '@/components/ShellItemString.vue';
-import ShellItemArray from '@/components/ShellItemArray.vue';
-import ShellItemLink from '@/components/ShellItemLink.vue';
+import ShellItemString from './ShellItemString.vue';
+import ShellItemArray from './ShellItemArray.vue';
+import ShellItemLink from './ShellItemLink.vue';
 
 export default {
   name: 'ShellItem',

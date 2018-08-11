@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue';
+import Nav from './Nav.vue';
 
 export default {
   name: 'Navbar',
@@ -36,7 +36,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
-  @import '../config/variables.scss';
+  @import '@/config/variables.scss';
 
   .header {
     position: fixed;
