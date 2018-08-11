@@ -1,6 +1,6 @@
 <template>
   <div class='footer'>
-    ©2018 - prudywsh.com
+    ©2018 - prudywsh.me
   </div>
 </template>
 
@@ -20,4 +20,3 @@ export default {
     text-align: center;
   }
 </style>
-

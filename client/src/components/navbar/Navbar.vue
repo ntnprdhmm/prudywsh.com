@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header__container">
       <h1 class="header__container__title">
-        Prudywsh.com
+        prudywsh.me
       </h1>
     </div>
     <Nav :show='showNav' />
