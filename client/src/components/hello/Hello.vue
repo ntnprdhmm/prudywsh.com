@@ -33,7 +33,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - #{$navbar-height});
+    height: 100vh;
   }
 
   .hello__content {

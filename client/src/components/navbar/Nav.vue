@@ -2,8 +2,10 @@
   <nav id='nav' class='header__nav'
     :class='{ "header__nav--displayed": show, "header__nav--hidden": !show }'>
     <ul class='header__nav__list'>
-      <li v-for='link in links'>
-        <a href='' class='header__nav__link'>{{ link.text }}</a>
+      <li v-for='link in links' :key='link.href'>
+        <a :href='link.href' class='header__nav__link'>
+          {{ link.label }}
+        </a>
       </li>
     </ul>
   </nav>
@@ -18,9 +20,9 @@ export default {
   data() {
     return {
       links: [
-        { text: 'About me' },
-        { text: 'Socials' },
-        { text: 'Contact' },
+        { label: 'Take a beer', href: '#bar' },
+        { label: 'About me', href: '#about' },
+        { label: 'Social', href: '#social' },
       ],
     };
   },
