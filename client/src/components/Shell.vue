@@ -36,7 +36,7 @@ export default {
 
 <style scoped lang='scss'>
 .shell-container {
-  background-color: #FF7655;
+  background-color: #e73357;
   padding-top: 30px;
   padding-bottom: 30px;
 }

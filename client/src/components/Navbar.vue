@@ -6,9 +6,9 @@
       </h1>
     </div>
     <Nav :show='showNav' />
-    <button @click='toggleNav' :class='{ "button--active" : showNav,
-      "button--inactive": !showNav }' class='button' type='button'>
-      <span class='icon'></span>
+    <button @click='toggleNav' :class='{ "header__button--active" : showNav,
+      "button--inactive": !showNav }' class='header__button' type='button'>
+      <span class='header__button__icon'></span>
     </button>
   </header>
 </template>
@@ -35,7 +35,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped lang='scss'>
+  @import '../config/variables.scss';
+
   .header {
     position: fixed;
     top: 0;
@@ -44,23 +46,20 @@ export default {
   }
 
   .header__container {
-    background-color: #fff;
-    padding: 3em 0;
+    background-color: $white;
+    padding: $navbar-padding 0;
   }
 
   .header__container__title {
-    line-height: 18px;
-    font-size: 18px;
+    line-height: $navbar-header-font-size;
+    font-size: $navbar-header-font-size;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .2em;
     margin: 0;
   }
 
-  /* BUTTON PART */
-
-  .button {
-    /* remove all default style */
+  .header__button {
     background: none;
     color: inherit;
     border: none;
@@ -68,16 +67,16 @@ export default {
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    height: 18px;
+    height: $navbar-header-font-size;
     width: 26px;
     position: absolute;
-    top: 3em;
+    top: $navbar-padding;
     left: 2em;
   }
 
-  .icon,
-  .icon::after,
-  .icon::before {
+  .header__button__icon,
+  .header__button__icon::after,
+  .header__button__icon::before {
     position: absolute;
     z-index: 900;
     background-color: #333;
@@ -87,28 +86,28 @@ export default {
     border-radius: 3px;
   }
 
-  .icon::after,
-  .icon::before {
+  .header__button__icon::after,
+  .header__button__icon::before {
     content: '';
     margin: -13px;
   }
 
-  .icon::after {
+  .header__button__icon::after {
     margin-top: 10px;
   }
 
-  .icon::before {
+  .header__button__icon::before {
     margin-top: -10px;
   }
 
-  .button--active .icon,
-  .button--inactive .icon {
+  .header__button--active .header__button__icon,
+  .header__button--inactive .header__button__icon {
     transition: .15s ease-in-out;
   }
-  .button--active .icon {
+  .header__button--active .header__button__icon {
     transform: rotate(90deg);
   }
-  .button--inactive .icon {
+  .header__button--inactive .header__button__icon {
     transform: rotate(0deg);
   }
 </style>

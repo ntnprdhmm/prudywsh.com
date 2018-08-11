@@ -1,15 +1,19 @@
 <template>
   <div class='hello'>
     <div class='hello__content'>
-      <h2>
+      <h2 class='hello__content__title'>
         Hello, world !
       </h2>
-      <p class='hello__content__text'>
-        I'm <strong>Antoine Prudhomme</strong>
-        &nbsp;<span class='hello__content__text--small'>(aka <strong>prudywsh</strong>)</span>
-        <br>
-        a 23yo <strong>fullstack engineer</strong> living in <strong>Paris</strong>
-      </p>
+      <div class='hello__content__text'>
+        <p>
+          My name is <strong>Antoine Prudhomme</strong>
+        </p>
+        <p>
+          A 23yo <strong>fullstack software engineer</strong>
+          <br>
+          currently living in <strong>Paris</strong>
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -21,24 +25,33 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+  @import '../config/variables.scss';
+
   .hello {
-    background-color: #33B1E7;
+    background-color: $white;
+    color: $grey-10;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 6em;
+    height: calc(100vh - #{$navbar-height});
   }
 
   .hello__content {
     text-align: center;
+    padding-bottom: $navbar-padding;
+  }
+
+  .hello__content__title {
+    color: $primary;
+    font-size: 2.5em;
+    text-transform: uppercase;
   }
 
   .hello__content__text {
     font-size: 1.5em;
   }
 
-  .hello__content__text--small {
-    font-size: .6em;
-    color: #555;
+  .hello__content__text strong {
+    color: $secondary;
   }
 </style>

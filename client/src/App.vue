@@ -4,15 +4,13 @@
   </div>
 </template>
 
-<style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+<style scoped lang='scss'>
+@import 'config/variables.scss';
 
 #app {
-  font-family: 'Open Sans', monospace;
-  color: #2c3e50;
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $grey-10;
 }
 
-strong {
-  color: #333;
-}
 </style>
