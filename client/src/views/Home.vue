@@ -4,6 +4,7 @@
     <Hello />
     <Bar />
     <Shell />
+    <Social />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Navbar from '@/components/navbar/Navbar.vue';
 import Hello from '@/components/hello/Hello.vue';
 import Bar from '@/components/bar/Bar.vue';
 import Shell from '@/components/shell/Shell.vue';
+import Social from '@/components/social/Social.vue';
 
 export default {
   name: 'home',
@@ -20,6 +22,7 @@ export default {
     Navbar,
     Shell,
     Bar,
+    Social,
   },
 };
 </script>
