@@ -68,7 +68,8 @@ export default {
     display: table;
     width: 100%;
     table-layout: fixed;
-    padding: $section-padding;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
   }
 
   .bar__drawing, .bar__content {
@@ -78,7 +79,7 @@ export default {
     height: auto;
   }
 
-  .bar__drawing__flex, .bar__content__flex {
+  .bar__drawing__flex {
     display: flex;
     justify-content: center;
     align-items: center;
