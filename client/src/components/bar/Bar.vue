@@ -96,4 +96,17 @@ export default {
   .bar__content__flex__title {
     color: $white;
   }
+
+  @media (max-width: $mobile-width) {
+    .bar__drawing, .bar__content {
+      display: block;
+    }
+
+    .bar__content {
+      padding-left: $section-padding;
+      padding-right: $section-padding;
+      padding-top: $section-padding;
+      text-align: center;
+    }
+  }
 </style>

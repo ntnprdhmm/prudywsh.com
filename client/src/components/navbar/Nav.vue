@@ -29,10 +29,19 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped lang='scss'>
+  @import '@/config/variables.scss';
+
   .header__nav {
-    background-color: #eee;
-    width: 200px;
+    background-color: $grey-2;
+    width: 300px;
+    display: inline-block;
+  }
+
+  @media (max-width: $mobile-width) {
+    .header__nav {
+      width: 100%;
+    }
   }
 
   .header__nav__list {
@@ -51,12 +60,12 @@ export default {
   .header__nav__link:visited,
   .header__nav__link:link,
   .header__nav__link:hover {
-    color: #555;
+    color: $grey-9;
     text-decoration: none;
   }
 
   .header__nav__link:hover {
-    background-color: #ddd;
+    background-color: $grey-3;
   }
 
   .header__nav--hidden {

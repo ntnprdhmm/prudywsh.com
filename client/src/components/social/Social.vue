@@ -47,7 +47,7 @@ export default {
   }
 
   .social__container {
-    padding-top: 4em;
+    padding-top: 3em;
   }
 
   .social__link {
@@ -55,6 +55,8 @@ export default {
     display: block;
     float: left;
     clear: left;
+    margin: 1em 1em 0 1em;
+    width: 100px;
   }
   .social__link:link,
   .social__link:active,
@@ -110,10 +112,6 @@ export default {
 
   .social {
     display: inline-block;
-  }
-
-  .social:not(:last-child) {
-    margin-right: 2em;
   }
 
   @keyframes jump {
