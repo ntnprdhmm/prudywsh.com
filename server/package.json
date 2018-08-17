@@ -11,6 +11,7 @@
     "eslint": "./node_modules/.bin/eslint src/*.js"
   },
   "dependencies": {
+    "connect-history-api-fallback": "^1.5.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3"
   },

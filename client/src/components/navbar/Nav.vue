@@ -3,7 +3,11 @@
     :class='{ "header__nav--displayed": show, "header__nav--hidden": !show }'>
     <ul class='header__nav__list'>
       <li v-for='link in links' :key='link.href'>
-        <a :href='link.href' class='header__nav__link'>
+        <router-link v-if='link.router' :to='link.href'
+          class='header__nav__link'>
+          {{ link.label }}
+        </router-link>
+        <a v-else :href='link.href' class='header__nav__link'>
           {{ link.label }}
         </a>
       </li>
@@ -20,9 +24,10 @@ export default {
   data() {
     return {
       links: [
-        { label: 'Take a beer', href: '#bar' },
-        { label: 'About me', href: '#about' },
-        { label: 'Social', href: '#social' },
+        { label: 'Take a beer', href: '#bar', router: false },
+        { label: 'About me', href: '#about', router: false },
+        { label: 'Social', href: '#social', router: false },
+        { label: 'Projects', href: 'projects', router: true },
       ],
     };
   },
