@@ -27,7 +27,7 @@ export default {
         { label: 'Take a beer', href: '#bar', router: false },
         { label: 'About me', href: '#about', router: false },
         { label: 'Social', href: '#social', router: false },
-        { label: 'Projects', href: 'projects', router: true },
+        // { label: 'Projects', href: 'projects', router: true },
       ],
     };
   },
