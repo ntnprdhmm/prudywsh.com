@@ -35,5 +35,15 @@ export default {
   .container__content__link {
     display: block;
     text-align: center;
+    font-size: 2em;
+  }
+
+  @media (max-width: $mobile-width) {
+    .container__content__title {
+      font-size: 1.5em;
+    }
+    .container__content__link {
+      font-size: 1em;
+    }
   }
 </style>
