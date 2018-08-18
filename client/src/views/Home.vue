@@ -5,7 +5,7 @@
     <Anchor anchorId='bar' />
     <Bar />
     <Anchor anchorId='about' />
-    <Shell />
+    <ShellAbout />
     <Anchor anchorId='social' />
     <Social />
     <Footer />
@@ -16,17 +16,17 @@
 import Navbar from '@/components/navbar/Navbar.vue';
 import Hello from '@/components/hello/Hello.vue';
 import Bar from '@/components/bar/Bar.vue';
-import Shell from '@/components/shell/Shell.vue';
+import ShellAbout from '@/components/shellAbout/ShellAbout.vue';
 import Social from '@/components/social/Social.vue';
 import Footer from '@/components/footer/Footer.vue';
 import Anchor from '@/components/Anchor.vue';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     Hello,
     Navbar,
-    Shell,
+    ShellAbout,
     Bar,
     Social,
     Footer,

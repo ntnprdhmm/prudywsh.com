@@ -7,10 +7,10 @@
           <span class='circle circle--yellow'></span>
           <span class='circle circle--green'></span>
         </div>
-        About me
+        {{ title }}
       </div>
       <div class='shell__body'>
-        <ShellItem v-for='(value, key) in shellItems'
+        <ShellItem v-for='(value, key) in items'
           :title='key'
           :type='value.type'
           :data='value.data'
@@ -28,20 +28,10 @@ export default {
   components: {
     ShellItem,
   },
-  data: () => ({
-    shellItems: {
-      location: { type: 'string', data: 'Paris, France' },
-      work_at: { type: 'string', data: 'Spendesk' },
-      interests: {
-        type: 'array',
-        data: ['web', 'fullstack', 'competitive programming', 'road cycling', 'beer'],
-      },
-      favorite_languages: {
-        type: 'array',
-        data: ['Javascript', 'Python'],
-      },
-    },
-  }),
+  props: {
+    title: String,
+    items: Object,
+  },
 };
 </script>
 
